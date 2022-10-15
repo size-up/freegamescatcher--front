@@ -1,6 +1,8 @@
 <template>
   <div class="navbar">
-    <span class="navbar__title">🎮 {{ packageJson.displayName }}</span>
+    <span class="navbar__title"
+      ><span class="circle">🎮</span> {{ packageJson.displayName }}</span
+    >
     <span>Notify your friends when a free game is available !</span>
   </div>
 </template>
@@ -24,5 +26,10 @@ import packageJson from "../../package.json";
     font-size: 1rem;
     font-family: PressStart2P;
   }
+}
+.circle {
+  padding: 0px 1px 5px 1px;
+  border-radius: 25%;
+  background-color: $color-light;
 }
 </style>

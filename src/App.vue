@@ -2,18 +2,33 @@
   <header>
     <NavbarComponent />
   </header>
-  <main>
-    <span class="message">
-      Hello you and welcome to {{ packageJson.displayName }} !
-    </span>
-    <SubscribeFormComponent />
-  </main>
+  <button @click="active">CLICK ME</button>
+  <overlay-loader :is-active="status.isActive">
+    <main>
+      <span class="message">
+        Hello you and welcome to <br />
+        {{ packageJson.displayName }} !
+      </span>
+      <SubscribeFormComponent />
+    </main>
+  </overlay-loader>
 </template>
 
 <script setup lang="ts">
 import packageJson from "../package.json";
 import NavbarComponent from "./components/NavbarComponent.vue";
 import SubscribeFormComponent from "./components/SubscribeFormComponent.vue";
+import { reactive } from "vue";
+import OverlayLoader from "./components/OverlayLoader.vue";
+
+const status = reactive({
+  isActive: false,
+});
+
+function active() {
+  console.log("click");
+  status.isActive = !status.isActive;
+}
 </script>
 
 <style scoped lang="scss">

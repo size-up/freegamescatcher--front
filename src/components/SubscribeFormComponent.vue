@@ -1,17 +1,19 @@
 <template>
-  <div class="input">
-    <div class="input__message">
-      If you want to get notified for free games,<br />
-      please subscribe to our newsletter:
+  <div class="card">
+    <div class="input">
+      <div class="input__message">
+        If you want to get notified for free games,<br />
+        please subscribe to our newsletter:
+      </div>
+      <label class="input__label">Name:</label>
+      <input class="input__element" id="name" placeholder="Your name..." />
+      <label class="input__label">Email:</label>
+      <input class="input__element" id="email" placeholder="Your email..." />
     </div>
-    <label class="input__label">Name:</label>
-    <input class="input__element" id="name" placeholder="Your name..." />
-    <label class="input__label">Email:</label>
-    <input class="input__element" id="email" placeholder="Your email..." />
-  </div>
 
-  <div class="subscribe">
-    <button class="subscribe__element">Subscribe</button>
+    <div class="subscribe">
+      <button class="subscribe__element">Subscribe</button>
+    </div>
   </div>
 </template>
 
@@ -19,6 +21,13 @@
 
 <style scoped lang="scss">
 @use "../styles/_variables.scss" as *;
+
+.card {
+  background-color: white;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem #00000073;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
 
 .input {
   display: flex;
