@@ -3,6 +3,7 @@
 /* color palette */
 :root {
   --color-light: rgb(249, 249, 249);
+  --color-dark: rgb(120, 120, 120);
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   line-height: 1.6;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,4 +20,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
 }

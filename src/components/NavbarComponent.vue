@@ -1,6 +1,7 @@
 <template>
   <div class="navbar">
-    {{ packageJson.displayName }}
+    <span class="title">{{ packageJson.displayName }}</span>
+    <span> application</span>
   </div>
 </template>
 
@@ -13,5 +14,10 @@ import packageJson from "../../package.json";
   background-color: var(--color-dark);
   color: var(--color-light);
   padding: 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
 }
 </style>
