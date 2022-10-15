@@ -1,25 +1,22 @@
 <template>
   <header>
-    <NavbarComponent />
+    <navbar-component />
   </header>
-  <button @click="active">CLICK ME</button>
+  <!-- <button @click="active">CLICK ME</button> -->
   <overlay-loader :is-active="status.isActive">
     <main>
-      <span class="message">
-        Hello you and welcome to <br />
-        {{ packageJson.displayName }} !
-      </span>
-      <SubscribeFormComponent />
+      <welcome-box />
+      <subscribe-form-component />
     </main>
   </overlay-loader>
 </template>
 
 <script setup lang="ts">
-import packageJson from "../package.json";
-import NavbarComponent from "./components/NavbarComponent.vue";
-import SubscribeFormComponent from "./components/SubscribeFormComponent.vue";
+import NavbarComponent from "@/components/NavbarComponent.vue";
+import WelcomeBox from "@/components/WelcomeBox.vue";
+import SubscribeFormComponent from "@/components/SubscribeFormComponent.vue";
+import OverlayLoader from "@/components/OverlayLoader.vue";
 import { reactive } from "vue";
-import OverlayLoader from "./components/OverlayLoader.vue";
 
 const status = reactive({
   isActive: false,
@@ -32,21 +29,14 @@ function active() {
 </script>
 
 <style scoped lang="scss">
-@use "./styles/_variables.scss" as *;
+@use "@/styles/_variables.scss" as *;
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-}
 
-.message {
-  color: $color-dark;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  text-align: center;
+  height: 80%;
 }
 </style>

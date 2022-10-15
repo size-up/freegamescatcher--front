@@ -23,7 +23,7 @@ const getClass = computed(() => {
 });
 </script>
 <style scoped lang="scss">
-@use "../styles/_variables.scss" as *;
+@use "@/styles/_variables.scss" as *;
 
 /* WRAPPER */
 .wrapper {
@@ -41,7 +41,7 @@ const getClass = computed(() => {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: #00000033;
+  background-color: $color-primary-darker;
 }
 
 /* SPINNER CLASSES */
@@ -63,11 +63,10 @@ const getClass = computed(() => {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid rgb(65, 109, 255);
+  border: 8px solid $color-primary-lighter;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  /* border-color: rgb(65, 109, 255) transparent transparent transparent; */
-  border-color: $color-dark transparent transparent transparent;
+  border-color: $color-primary-light transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;

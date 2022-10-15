@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: "PressStart2P";
-  src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
+  src: url("@/fonts/PressStart2P-Regular.ttf") format("truetype");
 }
 
 html {
-  background-color: $color-light;
+  background-color: $color-primary-dark;
 }
 
 body {
