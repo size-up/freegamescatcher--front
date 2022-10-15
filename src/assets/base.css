@@ -2,8 +2,11 @@
 
 /* color palette */
 :root {
-  --color-light: rgb(249, 249, 249);
-  --color-dark: rgb(120, 120, 120);
+  --color-light: #f9f9f9;
+  --color-lighter: #8f85ff;
+  --color-main: #1400f5;
+  --color-dark: #0A007A;
+  --color-darker: #070052;
 }
 
 html {

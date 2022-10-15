@@ -1,6 +1,6 @@
 {
   "name": "freegamescatcher--front",
-  "displayName": "🎮 Free Games Catcher",
+  "displayName": "Free Games Catcher",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

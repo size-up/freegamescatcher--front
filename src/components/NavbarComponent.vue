@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
-    <span class="title">{{ packageJson.displayName }}</span>
-    <span> application</span>
+    <span class="title">🎮 {{ packageJson.displayName }}</span>
+    <span> - Notify your friends when a free game is available !</span>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import packageJson from "../../package.json";
 .navbar {
   background-color: var(--color-dark);
   color: var(--color-light);
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .title {
