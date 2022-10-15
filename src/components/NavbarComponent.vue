@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
-    <span class="title">🎮 {{ packageJson.displayName }}</span>
-    <span> - Notify your friends when a free game is available !</span>
+    <span class="navbar__title">🎮 {{ packageJson.displayName }}</span>
+    <span>Notify your friends when a free game is available !</span>
   </div>
 </template>
 
@@ -9,15 +9,20 @@
 import packageJson from "../../package.json";
 </script>
 
-<style scoped>
-.navbar {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 0.75rem;
-}
+<style scoped lang="scss">
+@use "../styles/_variables.scss" as *;
 
-.title {
-  font-size: 1rem;
-  font-weight: bold;
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color-dark;
+  color: $color-light;
+  padding: 0.75rem;
+
+  &__title {
+    font-size: 1rem;
+    font-family: PressStart2P;
+  }
 }
 </style>

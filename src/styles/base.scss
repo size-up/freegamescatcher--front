@@ -1,25 +1,24 @@
-@import "./reset.css";
+@use "./reset.scss";
+@use "./_variables.scss" as *;
 
-/* color palette */
-:root {
-  --color-light: #f9f9f9;
-  --color-lighter: #8f85ff;
-  --color-main: #1400f5;
-  --color-dark: #0A007A;
-  --color-darker: #070052;
+@font-face {
+  font-family: "PressStart2P";
+  src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
 }
 
 html {
-  background-color: var(--color-light);
+  background-color: $color-light;
 }
 
 body {
   height: 100vh;
   line-height: 1.6;
+
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-size: 15px;
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

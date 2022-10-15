@@ -4,8 +4,7 @@
   </header>
   <main>
     <span class="message">
-      Hello you and welcome to <br />
-      {{ packageJson.displayName }} !
+      Hello you and welcome to {{ packageJson.displayName }} !
     </span>
     <SubscribeFormComponent />
   </main>
@@ -17,7 +16,9 @@ import NavbarComponent from "./components/NavbarComponent.vue";
 import SubscribeFormComponent from "./components/SubscribeFormComponent.vue";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@use "./styles/_variables.scss" as *;
+
 main {
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@ main {
 }
 
 .message {
-  color: var(--color-dark);
+  color: $color-dark;
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 1rem;
