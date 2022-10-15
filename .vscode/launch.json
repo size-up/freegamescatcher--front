@@ -6,7 +6,7 @@
   "configurations": [
     {
       "preLaunchTask": "install",
-      "command": "yarn run dev",
+      "command": "yarn run dev --host",
       "name": "Launch [development]",
       "request": "launch",
       "type": "node-terminal"
