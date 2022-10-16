@@ -34,12 +34,15 @@
 </template>
 
 <script setup lang="ts">
+import { useSubscribeStore } from "@/stores/subscribe";
 import { reactive, ref, watch } from "vue";
 
 const input = reactive({
   name: "",
   email: "",
 });
+
+const subscribeStore = useSubscribeStore();
 
 let disabled = ref(true);
 
@@ -65,8 +68,12 @@ function validateEmail(email: string) {
   return regex.test(email);
 }
 
-function onSubscribe() {
+async function onSubscribe() {
   if (!disabled.value) {
+    subscribeStore.isLoading = true;
+    const response = await subscribeStore.onSbuscribe(input);
+    console.log(response.data);
+    subscribeStore.isLoading = false;
     console.log("Transmitted data:", input.name, input.email);
     //TODO send data to backend
   } else {
