@@ -1,7 +1,9 @@
 {
-  "name": "freegamescatcher--front",
+  "name": "freegamescatcher-front",
   "displayName": "Free Games Catcher",
+  "description": "Free Games Catcher is the front-end of the core application that trigger an alert when a free game is available.",
   "version": "0.0.0",
+  "license": "GNU GPLv3",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
