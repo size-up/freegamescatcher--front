@@ -1,0 +1,53 @@
+@import "./reset.scss";
+@import "./_variables.scss";
+
+html {
+  background: linear-gradient(270deg, $rich-black-2, $prussian-blue, $lapis-lazuli);
+  background-size: 600% 600%;
+  animation: LinearGradient 10s ease infinite;
+}
+
+@keyframes LinearGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  color: $alice-blue; // text color
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+a {
+  color: $alice-blue;
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
+}
+
+bold {
+  font-weight: bold;
+}
